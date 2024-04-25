@@ -43,21 +43,18 @@ class Solution3:
     def containsDuplicate(self, nums: list[int]) -> bool:
         hashset_nums = set()
         for item in nums:
-            if item in set_nums:
+            if item in hashset_nums:
                 return True
             else:
                 hashset_nums.add(item)
         return False
 
 
-nums1 = [1,2,3,1]
-test1 = Solution3(nums1)
-print("test1 result:" + test1)
+test1 = Solution3().containsDuplicate([1,2,3,1])
+print("\nTest 1 result: " + str(test1))
 
-nums2 = [1,2,3,4]
-test2 = Solution3(nums2)
-print("test2 result:" + test2)
+test2 = Solution3().containsDuplicate([1,2,3,4])
+print("\nTest 2 result: " + str(test2))
 
-nums3 = [1,1,1,3,3,4,3,2,4,2]
-test3 = Solution3(nums)
-print("test3 result:" + test3)
+test3 = Solution3().containsDuplicate([1,1,1,3,3,4,3,2,4,2])
+print("\nTest 3 result: " + str(test3) + "\n")
