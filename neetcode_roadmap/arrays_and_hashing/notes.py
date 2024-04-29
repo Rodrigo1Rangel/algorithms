@@ -28,12 +28,15 @@ print(a[1])
 print(b)
 print(b[1])
 print(b[100]) # defaultdict() returns an empty list when the key is not found
+# but you are allowed to b[new_key].append(new_value), even though the key does
+# not exist in the defaultdictionary.
 
 # Multiplication of a list
 count = [0, 1, 2, 3] * 3
 print(count)
 
-# Unicode point for a one-character string
+# Unicode point for a one-character string (lower and upper cases have different values)
+# ASCII - American Standard Code for Information Interchange
 # The unicode from 'a' to 'z' is linear, starting from 97
 unicode_point_a = ord('a')
 print(unicode_point_a)

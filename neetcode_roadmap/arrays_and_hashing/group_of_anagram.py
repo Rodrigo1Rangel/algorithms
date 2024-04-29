@@ -1,4 +1,6 @@
 """
+49. Group of Anagram (medium):
+
 Given an array of strings strs, group the anagrams together. You can return
 the answer in any order. An Anagram is a word or phrase formed by rearranging
 the letters of a different word or phrase, typically using all the original
@@ -46,8 +48,10 @@ class Solution:
                 # has a greater ord() value.
                 letters_index[ord(letter) - ord("a")] += 1 # increment at appearence
 
-            # here we can add key:value into the default
-            # to append the word in the hashmap value related to the letters_index (key)
+            # Here we can add key:value into the default
+            # Although the key 'tuple(letters_index)' does not exist in the dictionary, it will
+            # be created because it is a defaultdict().
+            # To append the word in the hashmap value related to the letters_index (key)
             result_hashmap[tuple(letters_index)].append(word) # 'append' works because default value is a list.
             # tuple(), as a list can not be a key in a dictionary.
         return result_hashmap.values()
